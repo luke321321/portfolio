@@ -1,0 +1,3 @@
+[submodule "spam"]
+	path = spam
+	url = git@github.com:luke321321/spam.git
