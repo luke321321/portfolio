@@ -24,3 +24,11 @@ A naive Bayes classifier for detecting spam SMS.
 **Result**: we achived a 97.4% accuracy.
 
 **Skills used**: data processing, navie Bayes classifier
+
+## [Gaussian Process approximator in Bayesian inverse problems](https://github.com/luke321321/inversemcmc)
+
+This code contains an example of using a Gaussian Process approximator in Bayesian inverse problems.  In particular we use the Gaussian process emulator during a simple MCMC estimating the solution to a PDE and look at two different examples based upon current research.
+
+**Result**: Using a Gaussian process as a marginal approximation is recommended.  This is due to it running quicker than a random approximation with the same theoretical convergence speed.
+
+**Skills used**: inverse problems, approximate Bayesian computation, MCMC, Gaussian processes, inference

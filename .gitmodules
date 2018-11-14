@@ -1,3 +1,6 @@
 [submodule "spam"]
 	path = spam
 	url = git@github.com:luke321321/spam.git
+[submodule "inversemcmc"]
+	path = inversemcmc
+	url = git@github.com:luke321321/inversemcmc.git
