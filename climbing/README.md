@@ -5,9 +5,9 @@ The [moonboard](https://www.moonboard.com) is a climbing training tool.  Each mo
 Our aim is to predict the climbing grade only given the holds used for a climb.  This is a hard task - one which experienced climbers would find hard to do without climbing the route.  Even after climbing a route the route setter grade and the crowd source grade only agreed 95% of the time.
 
 Tasks and layout of the code:
-- We scraped the data from the moonboard website in the [scraper notebook](Scraper.ipynb).
-- We clean the data and analyise it in the [Data-cleaning-and-analysis notebook](Data-cleaning-and-analysis.ipynb).
-- We fit a CNN (convolution neural network) model based upon ResNetv2 in the [CNN notebook](CNN.ipynb). 
+- We scraped the data from the moonboard website in the [scraper notebook](https://nbviewer.jupyter.org/github/luke321321/portfolio/blob/master/climbing/Scraper.ipynb).
+- We clean the data and analyise it in the [Data-cleaning-and-analysis notebook](https://nbviewer.jupyter.org/github/luke321321/portfolio/blob/master/climbing/Data-cleaning-and-analysis.ipynb).
+- We fit a CNN (convolution neural network) model based upon ResNetv2 in the [CNN notebook](https://nbviewer.jupyter.org/github/luke321321/portfolio/blob/master/climbing/CNN.ipynb).
 
 Result: we achieved 62% accuracy on the test dataset.
 

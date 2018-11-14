@@ -3,7 +3,7 @@ Data science and machine learning portfolio.
 
 ## [Climbing Grade Classifier](climbing/README.md)
 
-The [moonboard](https://www.moonboard.com) is a climbing training tool.  Each moonboard is a short identical climbing wall with the same holds, at the same orinentation in the same place.  Our aim is to predict the climbing grade only given the holds used for a climb.  
+The [moonboard](https://www.moonboard.com) is a climbing training tool.  Each moonboard is a short identical climbing wall with the same holds, at the same orinentation in the same place.  Our aim is to predict the climbing grade given only the holds used for a climb.  
 
 **Result**: we achieved 62% accuracy on the test dataset.
 
