@@ -3,9 +3,9 @@ Data science and machine learning portfolio.
 
 ## [Climbing Grade Classifier](climbing/README.md)
 
-The [moonboard](https://www.moonboard.com) is a climbing training tool.  Each moonboard is a short identical climbing wall with the same holds, at the same orinentation in the same place.  Our aim is to predict the climbing grade given only the holds used for a climb.  
+The [moonboard](https://www.moonboard.com) is a climbing training tool.  Each moonboard is a short identical climbing wall with the same holds, at the same orinentation in the same place.  Our aim is to predict the climbing grade given only the holds used for a climb.  We experiment using different loss functions to take advantage of the structure present in the labels (can be numerically ordered).  Achieve a 70% accuracy with a cumulative Jensen-Shannon divergence loss (https://arxiv.org/pdf/1708.07089.pdf) instead of the usual cross-entropy loss.
 
-**Result**: we achieved 62% accuracy on the test dataset.
+**Result**: we achieved 70% accuracy on the test dataset.
 
 **Skills used**: web scraping, data cleaning, visualisation, machine learning, neural networks
 
