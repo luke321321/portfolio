@@ -4,7 +4,20 @@ The [moonboard](https://www.moonboard.com) is a climbing training tool.  Each mo
 
 Our aim is to predict the climbing grade only given the holds used for a climb.  This is a hard task - one which experienced climbers would find hard to do without climbing the route.  Even after climbing a route the route setter grade and the crowd source grade only agreed 95% of the time.
 
-We experiment with three different loss functions to try and take advantage of the ordering of our labels (grades arranged on a number line).  This allows us to gain 70% accuracy (one out) using the CJS (cummlative Jensen-Shannon divergence) as our loss function compared to 65% accuracy using the standard cross-entropy loss.  For more details about the CJS loss see https://arxiv.org/pdf/1708.07089.pdf.  We also test the squared earth mover's distance (or Wasserstein metric) as a loss function but this gives worse results (60%) - https://arxiv.org/pdf/1611.05916.pdf.
+We train a convolution neural network to classify routes by their grades and achieve 70% accuracy on the test dataset (using a one out accuracy, the true grade can be +- 1 of our guess).  We experiment with three different loss functions to try and take advantage of the ordering of our labels (the grades can be arranged on a number line).  For our loss functions we use:
+- CJS (cummlative Jensen-Shannon divergence), https://arxiv.org/pdf/1708.07089.pdf
+- Squared earth mover's distance (or Wasserstein metric), https://arxiv.org/pdf/1708.07089.pdf
+- Cross-entropy loss (standard loss function for any classification problem, which ignores the orderings of labels)
+
+Our one out accuracy results are:
+
+|Loss function| Accuracy (one out)|
+|---|---|
+|CJS | 69.4%|
+|squared earth mover's distance| 70.8%|
+|cross-entropy| 64.2%|
+
+Convolutional neural network model: this model is based upon a 14 layer ResNetv2 but with a few key differences: we add dropout layers and add the scaling of the residuals as in Inception-ResNet (https://arxiv.org/pdf/1602.07261.pdf).
 
 
 Tasks and layout of the code:
