@@ -6,7 +6,7 @@ Our aim is to predict the climbing grade only given the holds used for a climb. 
 
 We train a convolution neural network to classify routes by their grades and achieve 71% accuracy on the test dataset (using a one out accuracy, the true grade can be +- 1 of our guess).  We experiment with three different loss functions to try and take advantage of the ordering of our labels (the grades can be arranged on a number line).  For our loss functions we use:
 - CJS (cummlative Jensen-Shannon divergence), https://arxiv.org/pdf/1708.07089.pdf
-- Squared earth mover's distance (or Wasserstein metric), https://arxiv.org/pdf/1708.07089.pdf
+- Squared earth mover's distance (or Wasserstein metric), https://arxiv.org/pdf/1611.05916.pdf
 - Cross-entropy loss (standard loss function for any classification problem, which ignores the orderings of labels)
 
 Our one out accuracy results are:
