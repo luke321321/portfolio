@@ -4,7 +4,7 @@ The [moonboard](https://www.moonboard.com) is a climbing training tool.  Each mo
 
 Our aim is to predict the climbing grade only given the holds used for a climb.  This is a hard task - one which experienced climbers would find hard to do without climbing the route.  Even after climbing a route the route setter grade and the crowd source grade only agreed 95% of the time.
 
-We train a convolution neural network to classify routes by their grades and achieve 71% accuracy on the test dataset (using a one out accuracy, the true grade can be +- 1 of our guess).  We experiment with three different loss functions to try and take advantage of the ordering of our labels (the grades can be arranged on a number line).  For our loss functions we use:
+I train a convolution neural network to classify routes by their grades and achieve 71% accuracy on the test dataset (using a one out accuracy, the true grade can be +- 1 of our guess).  We experiment with three different loss functions to try and take advantage of the ordering of our labels (the grades can be arranged on a number line).  For our loss functions I use:
 - CJS (cummlative Jensen-Shannon divergence), https://arxiv.org/pdf/1708.07089.pdf
 - Squared earth mover's distance (or Wasserstein metric), https://arxiv.org/pdf/1611.05916.pdf
 - Cross-entropy loss (standard loss function for any classification problem, which ignores the orderings of labels)
@@ -17,15 +17,15 @@ Our one out accuracy results are:
 |squared earth mover's distance| 70.8%|
 |cross-entropy| 64.2%|
 
-Convolutional neural network model: this model is based upon a 14 layer ResNetv2 but with a few key differences: we add dropout layers and add the scaling of the residuals as in Inception-ResNet (https://arxiv.org/pdf/1602.07261.pdf).
+Convolutional neural network model: this model is based upon a 14 layer ResNetv2 but with a few key differences: I add dropout layers and add the scaling of the residuals as in Inception-ResNet (https://arxiv.org/pdf/1602.07261.pdf).
 
 
 ## Tasks and layout of the code
-- We scraped the data from the moonboard website in the [scraper notebook](https://nbviewer.jupyter.org/github/luke321321/portfolio/blob/master/climbing/Scraper.ipynb).
-- We clean the data and analyise it in the [Data-cleaning-and-analysis notebook](https://nbviewer.jupyter.org/github/luke321321/portfolio/blob/master/climbing/Data-cleaning-and-analysis.ipynb).
-- We fit a CNN (convolution neural network) model based upon ResNetv2 in the [CNN notebook](https://nbviewer.jupyter.org/github/luke321321/portfolio/blob/master/climbing/CNN.ipynb).
+- I scraped the data from the moonboard website in the [scraper notebook](https://nbviewer.jupyter.org/github/luke321321/portfolio/blob/master/climbing/Scraper.ipynb).
+- I clean the data and analyise it in the [Data-cleaning-and-analysis notebook](https://nbviewer.jupyter.org/github/luke321321/portfolio/blob/master/climbing/Data-cleaning-and-analysis.ipynb).
+- I fit a CNN (convolution neural network) model based upon ResNetv2 in the [CNN notebook](https://nbviewer.jupyter.org/github/luke321321/portfolio/blob/master/climbing/CNN.ipynb).
 
-Result: we achieved 71% accuracy on the test dataset.
+Result: I achieved 71% accuracy on the test dataset.
 
 A picture of a moonboard:
 
